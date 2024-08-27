@@ -18,11 +18,11 @@ def load_data_from_folder(folder_path, key_to_split):
     return np.array(data_list, dtype=np.float32)
 
 # 加载数据
-key_to_split = 'data'  # 替换为实际键名
+key_to_split = 'data'  
 
-train_data = load_data_from_folder('output_data/train/20240709_133000', key_to_split)  # 替换 'output_data/train_data' 为实际训练集文件夹路径
-test_data = load_data_from_folder('output_data/test/20240709_133000', key_to_split)    # 替换 'output_data/test_data' 为实际测试集文件夹路径
-val_data = load_data_from_folder('output_data/validation/20240709_133000', key_to_split)    # 替换 'output_data/val_data' 为实际验证集文件夹路径
+train_data = load_data_from_folder('output_data/train/20240709_133000', key_to_split)  
+test_data = load_data_from_folder('output_data/test/20240709_133000', key_to_split)   
+val_data = load_data_from_folder('output_data/validation/20240709_133000', key_to_split)   
 
 # 创建数据集
 train_dataset = TensorDataset(torch.from_numpy(train_data))
